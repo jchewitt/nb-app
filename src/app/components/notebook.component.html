@@ -1,0 +1,17 @@
+<mat-card class="main">
+  <mat-card-header>
+    <mat-card-title>Notebook Page #{{pageEntry.page}}</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <form class="form">
+      <mat-form-field class="full-width" appearance="fill" class="entry">
+        <mat-label>Notebook Entry</mat-label>
+        <textarea class="entry" matInput [formControl]="entryText" placeholder="Type here..."></textarea>
+      </mat-form-field>
+    </form>
+    <mat-card-footer class="foot">
+      <button mat-raised-button (click)="setPage(pageNum - 1)" color="primary">Prev</button>
+      <button mat-raised-button (click)="setPage(pageNum + 1)" color="primary">Next</button>
+    </mat-card-footer>
+  </mat-card-content>
+</mat-card>
